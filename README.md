@@ -50,9 +50,7 @@ The .csv-file located in ``android_application/app/src/main/assets/book_spine_da
 - If you want to add books change the target .csv-filename ``filename_result`` in ``create_data_set.py`` and run the file
 
 
-
-![HCI Group](https://hci.uni-hannover.de/static/logo.png)
-
+![HCI Group](/Institute.png)
 
 This repository is developed by the Human-Computer Interaction Group at the University of Hannover. For additional details, see our MobileHCI'20 paper: [download](https://hci.uni-hannover.de/papers/Schrapel2020_Augmenting_Public_Bookcases.pdf). 
 For inquiries, please contact maximilian.schrapel@hci.uni-hannover.de
