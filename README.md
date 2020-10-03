@@ -1,10 +1,12 @@
-# Augmenting Public Bookcases to Support Book Sharing
+#  :books: Augmenting Public Bookcases to Support Book Sharing
 
-![Teaser Image](/Bookcase_teaser.png)
-
+<p align="center">
+  <img src="/Bookcase_teaser.png">
+</p>
 
 This repository provides our code used for the paper: 
 [`Augmenting Public Bookcases to Support Book Sharing`](https://hci.uni-hannover.de/papers/Schrapel2020_Augmenting_Public_Bookcases.pdf)
+
 Our contribution includes:
 - **Dataset**: [Download the dataset](https://drive.google.com/file/d/1ORzsnQ9cH193VQWvrV8S2hC-qPxRQSvA/view?usp=sharing)
 - **Application**: In folder ``android_application`` you find the Android application that was created by Thilo Schulz during his Master's thesis. The app is optimized for use with a Samsung Galaxy S9 smartphone.
@@ -49,8 +51,10 @@ The .csv-file located in ``android_application/app/src/main/assets/book_spine_da
 - If you want to recalcuate all features, simply run `python create_data_set.py`
 - If you want to add books change the target .csv-filename ``filename_result`` in ``create_data_set.py`` and run the file
 
+<p align="center">
+  <img src="/Institute.png">
+</p>
 
-![HCI Group](/Institute.png)
 
 This repository is developed by the Human-Computer Interaction Group at the University of Hannover. For additional details, see our MobileHCI'20 paper: [download](https://hci.uni-hannover.de/papers/Schrapel2020_Augmenting_Public_Bookcases.pdf). 
 For inquiries, please contact maximilian.schrapel@hci.uni-hannover.de
