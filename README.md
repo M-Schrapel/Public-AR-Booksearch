@@ -1,8 +1,7 @@
 #  :books: Augmenting Public Bookcases to Support Book Sharing
 
-<p align="center">
-  <img src="/Bookcase_teaser.png">
-</p>
+![Teaser Image](/Bookcase_teaser.png)
+
 
 This repository provides our code used for the paper: 
 [`Augmenting Public Bookcases to Support Book Sharing`](https://hci.uni-hannover.de/papers/Schrapel2020_Augmenting_Public_Bookcases.pdf)
@@ -11,9 +10,10 @@ Our contribution includes:
 - **Dataset**: [Download the dataset](https://drive.google.com/file/d/1ORzsnQ9cH193VQWvrV8S2hC-qPxRQSvA/view?usp=sharing)
 - **Application**: In folder ``android_application`` you find the Android application that was created by Thilo Schulz during his Master's thesis. The app is optimized for use with a Samsung Galaxy S9 smartphone.
 
+The dataset and repository is licensed under MIT licsense
 
 ## Citation
-If you use our app or dataset in your projects, please use the following BibTeX citation:
+If you use our app and/or dataset in your projects, please use the following BibTeX citation:
 ```
 @inproceedings{Schrapel:2020:Bookcases,
   title = {Augmenting Public Bookcases to Support Book Sharing},
@@ -27,8 +27,8 @@ If you use our app or dataset in your projects, please use the following BibTeX 
 ## Dataset
 Our [dataset](https://drive.google.com/file/d/1ORzsnQ9cH193VQWvrV8S2hC-qPxRQSvA/view?usp=sharing) includes:
 <details>
-  <summary>Bookspine images</summary>
-  <p>.png images of bookspines in different sizes and various conditions</p>
+  <summary>Book spine images</summary>
+  <p>.png images of book spines in different sizes and various conditions</p>
 </details>
 <details>
   <summary>Bookcase images</summary>
@@ -38,6 +38,7 @@ Our [dataset](https://drive.google.com/file/d/1ORzsnQ9cH193VQWvrV8S2hC-qPxRQSvA/
 
 After the download, add all images to the corresponding folders. The download is not neccessary for installing the app. 
 The .csv-file located in ``android_application/app/src/main/assets/book_spine_data.csv`` already provides precalculated features.
+The dataset is licsened under MIT licsense.
 
 ### Adding images to the dataset
 
@@ -48,14 +49,12 @@ The .csv-file located in ``android_application/app/src/main/assets/book_spine_da
 - Add title,subtitle,author,publisher,genre,filename
 - The filename is the name of your added book spine image
 - You can leave unused fields blank
-- If you want to recalcuate all features, simply run `python create_data_set.py`
+- If you want to recalcuate all features, simply run in a terminal `python create_data_set.py`
 - If you want to add books change the target .csv-filename ``filename_result`` in ``create_data_set.py`` and run the file
 
-<p align="center">
-  <img src="/Institute.png">
-</p>
 
+![HCI Group](/Institute.png)
 
 This repository is developed by the Human-Computer Interaction Group at the University of Hannover. For additional details, see our MobileHCI'20 paper: [download](https://hci.uni-hannover.de/papers/Schrapel2020_Augmenting_Public_Bookcases.pdf). 
-For inquiries, please contact maximilian.schrapel@hci.uni-hannover.de
+The dataset and code is licsened under MIT license. For inquiries, please contact maximilian.schrapel@hci.uni-hannover.de
 
