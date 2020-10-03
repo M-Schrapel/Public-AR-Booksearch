@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "masterarbeit_thilo.hci.luh.de.visualbooksearch"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file('../../../OpenCV/OpenCV-android-sdk-4.0.1/sdk/native/jni/OpenCV.mk')
+        }
+    }
+    aaptOptions {
+        noCompress "tflite"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.google.firebase:firebase-ml-vision:19.0.2'
+    implementation 'com.google.firebase:firebase-ml-vision-image-label-model:17.0.2'
+    implementation 'com.google.firebase:firebase-ml-model-interpreter:17.0.3'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'androidx.room:room-runtime:2.1.0-alpha03'
+    annotationProcessor 'androidx.room:room-compiler:2.1.0-alpha03'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0-alpha01'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.1.0-alpha02'
+    implementation 'com.google.ar.sceneform:core:1.7.0'
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.7.0"
+    implementation 'com.google.ar:core:1.7.0'
+    implementation 'com.opencsv:opencsv:4.4'
+    implementation project(':openCVLibrary4.0.1')
+    implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
+    implementation 'de.javagl:obj:0.2.1'
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+def targetFolder = "src/main/assets"
+def modelFloatV1DownloadUrl = "http://download.tensorflow.org/models/mobilenet_v1_2018_02_22/mobilenet_v1_1.0_224.tgz"
+def localCacheFloatV1 = "build/intermediates/mobilenet_v1_1.0_224.tgz"
+
+task downloadModelFloatV1(type: DownloadUrlTask) {
+    doFirst {
+        println "Downloading ${modelFloatV1DownloadUrl}"
+    }
+    sourceUrl = "${modelFloatV1DownloadUrl}"
+    target = file("${localCacheFloatV1}")
+}
+
+task unzipModelFloatV1(type: Copy, dependsOn: 'downloadModelFloatV1') {
+    doFirst {
+        println "Unzipping ${localCacheFloatV1}"
+    }
+    from tarTree("${localCacheFloatV1}")
+    into "${targetFolder}"
+}
+
+task cleanUnusedFiles(type: Delete, dependsOn: 'unzipModelFloatV1') {
+    delete fileTree("${targetFolder}").matching {
+        include "*.pb"
+        include "*.ckpt.*"
+        include "*.pbtxt*"
+        include "*_info.*"
+        include "*.meta"
+    }
+}
+
+
+// Ensure the model file is downloaded and extracted before every build
+preBuild.dependsOn unzipModelFloatV1
+preBuild.dependsOn cleanUnusedFiles
+
+class DownloadUrlTask extends DefaultTask {
+    @Input
+    String sourceUrl
+
+    @OutputFile
+    File target
+
+    @TaskAction
+    void download() {
+        ant.get(src: sourceUrl, dest: target)
+    }
+}

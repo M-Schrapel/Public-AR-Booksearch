@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".BookViewActivity">
+
+    <Button
+        android:id="@+id/btn_start_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btn_start_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_title_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/book_view_margin_start_header"
+        android:layout_marginEnd="@dimen/book_view_margin_end"
+        android:layout_marginTop="@dimen/book_view_margin_next_content"
+        android:text="@string/text_view_title_header"
+        style="@style/book_view_text_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_publisher_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/book_view_margin_start_header"
+        android:layout_marginEnd="@dimen/book_view_margin_end"
+        android:layout_marginTop="@dimen/book_view_margin_next_content"
+        android:text="@string/text_view_publisher_header"
+        style="@style/book_view_text_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_group" />
+
+    <TextView
+        android:id="@+id/text_view_genre_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/book_view_margin_start_header"
+        android:layout_marginEnd="@dimen/book_view_margin_end"
+        android:layout_marginTop="@dimen/book_view_margin_next_content"
+        android:text="@string/text_view_genre_header"
+        style="@style/book_view_text_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_publisher" />
+
+    <TextView
+        android:id="@+id/text_view_author_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/book_view_margin_start_header"
+        android:layout_marginEnd="@dimen/book_view_margin_end"
+        android:layout_marginTop="@dimen/book_view_margin_next_content"
+        android:text="@string/text_view_author_header"
+        style="@style/book_view_text_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_genre" />
+
+    <LinearLayout
+        android:id="@+id/title_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/book_view_content_border"
+        android:layout_marginStart="@dimen/book_view_margin_start"
+        android:layout_marginEnd="@dimen/book_view_margin_end"
+        android:layout_marginTop="@dimen/book_view_margin_content"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title_header">
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/book_view_text_padding"
+        android:paddingLeft="@dimen/book_view_text_padding"
+        android:paddingRight="@dimen/book_view_text_padding"
+        style="@style/book_view_text_content" />
+
+    <TextView
+        android:id="@+id/text_view_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/book_view_text_padding_between_title"
+        android:paddingBottom="@dimen/book_view_text_padding"
+        android:paddingLeft="@dimen/book_view_text_padding"
+        android:paddingRight="@dimen/book_view_text_padding"
+        style="@style/book_view_text_subtitle" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_publisher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/book_view_margin_start"
+        android:layout_marginEnd="@dimen/book_view_margin_end"
+        android:layout_marginTop="@dimen/book_view_margin_content"
+        android:padding="@dimen/book_view_text_padding"
+        android:background="@drawable/book_view_content_border"
+        style="@style/book_view_text_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_publisher_header" />
+
+    <TextView
+        android:id="@+id/text_view_genre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/book_view_margin_start"
+        android:layout_marginEnd="@dimen/book_view_margin_end"
+        android:layout_marginTop="@dimen/book_view_margin_content"
+        android:padding="@dimen/book_view_text_padding"
+        android:background="@drawable/book_view_content_border"
+        style="@style/book_view_text_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_genre_header" />
+
+    <TextView
+        android:id="@+id/text_view_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/book_view_margin_start"
+        android:layout_marginEnd="@dimen/book_view_margin_end"
+        android:layout_marginTop="@dimen/book_view_margin_content"
+        android:padding="@dimen/book_view_text_padding"
+        android:background="@drawable/book_view_content_border"
+        style="@style/book_view_text_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_author_header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Visual Book Search</string>
+    <string name="search_hint">Nach Titel suchen ...</string>
+    <string name="text_view_title_header">Titel</string>
+    <string name="text_view_publisher_header">Verlag</string>
+    <string name="text_view_genre_header">Genre</string>
+    <string name="text_view_author_header">Autor/en</string>
+    <string name="btn_start_search">Suche starten!</string>
+    <string name="btn_take_picture">Take picture!</string>
+    <string name="book_view_activity_title">Details zum Buch</string>
+    <string name="shelf_detected">Regal erkannt!</string>
+    <string name="move_smartphone">Bitte Smartphone kurz bewegen!</string>
+    <string name="search_started">Die Suche läuft …</string>
+    <string name="search_finished_no_book">Buch leider nicht gefunden.</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+</resources>

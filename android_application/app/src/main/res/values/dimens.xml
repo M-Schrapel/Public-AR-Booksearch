@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_height">64dp</dimen>
+    <dimen name="item_padding_top_bot">10dp</dimen>
+    <dimen name="item_padding_left_right">16dp</dimen>
+    <dimen name="item_text_title">18dp</dimen>
+    <dimen name="item_text_subtitle">12dp</dimen>
+
+    <dimen name="book_view_margin_start">16dp</dimen>
+    <dimen name="book_view_margin_start_header">32dp</dimen>
+    <dimen name="book_view_margin_end">16dp</dimen>
+    <dimen name="book_view_margin_content">3dp</dimen>
+    <dimen name="book_view_margin_next_content">16dp</dimen>
+    <dimen name="book_view_text_padding">7dp</dimen>
+    <dimen name="book_view_text_padding_between_title">2dp</dimen>
+    <dimen name="book_view_text_size_header">12dp</dimen>
+    <dimen name="book_view_text_size_content">18dp</dimen>
+    <dimen name="book_view_text_size_subcontent">12dp</dimen>
+</resources>

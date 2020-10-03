@@ -1,0 +1,2 @@
+1. Falls die Datenbank erweitert wird, muss die App zuerst deinstalliert und anschließend wieder neu installiert werden. Die Datenbank wird nämlich nur nach dem erstmaligem Start der App geladen/aktualisiert.
+2. Die Berechtigung für den Speicherzugriff (nur für Debug-Ausgaben notwendig) muss manuell gesetzt werden: Einstellungen -> Apps -> Visual Search Book -> Berechtigungen -> Speicher.

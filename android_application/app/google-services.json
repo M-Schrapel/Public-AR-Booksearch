@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "698996233574",
+    "firebase_url": "https://visualbooksearch.firebaseio.com",
+    "project_id": "visualbooksearch",
+    "storage_bucket": "visualbooksearch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698996233574:android:fbc62c5dc0421f82",
+        "android_client_info": {
+          "package_name": "masterarbeit_thilo.hci.luh.de.visualbooksearch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698996233574-n9od6q52n0b0ueit64bupm9stcjn3vk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv9I4H6SNQotJKRrlqaa18v3jy8kddDSc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
