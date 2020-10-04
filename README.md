@@ -57,4 +57,4 @@ The dataset is licsened under MIT licsense.
 
 This repository is provided by the Human-Computer Interaction Group at the University Hannover, Germany. For additional details, see our MobileHCI'20 paper: [download](https://hci.uni-hannover.de/papers/Schrapel2020_Augmenting_Public_Bookcases.pdf). 
 The dataset and code is licsened under MIT license. For inquiries, please contact maximilian.schrapel@hci.uni-hannover.de
-<br>:books: :plus: :mobile_phone: :arrow_right: :heart:
+<br>:books: :heavy_plus_sign: :iphone: :arrow_right: :heart:
