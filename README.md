@@ -15,13 +15,21 @@ The dataset and repository is licensed under MIT licsense
 ## Citation
 If you use our app and/or dataset in your projects, please use the following BibTeX citation:
 ```
-@inproceedings{Schrapel:2020:Bookcases,
-  title = {Augmenting Public Bookcases to Support Book Sharing},
-  booktitle = {Proceedings of the 22th international conference on Human computer interaction with mobile devices and services},
-  year = {2020},
-  doi = {3379503.3403542},
-  series = {MobileHCI '20},
-  author = {Schrapel, Maximilian and Schulz, Thilo and Rohs, Michael}, 
+@inproceedings{10.1145/3379503.3403542,
+author = {Schrapel, Maximilian and Schulz, Thilo and Rohs, Michael},
+title = {Augmenting Public Bookcases to Support Book Sharing},
+year = {2020},
+isbn = {9781450375160},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3379503.3403542},
+doi = {10.1145/3379503.3403542},
+booktitle = {22nd International Conference on Human-Computer Interaction with Mobile Devices and Services},
+articleno = {11},
+numpages = {11},
+keywords = {Sharing Economy, Computer Vision, Sharing Community, Design for Sharing, Augmented Reality, Mobile Interaction},
+location = {Oldenburg, Germany},
+series = {MobileHCI '20}
 }
 ```
 ## Dataset
